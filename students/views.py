@@ -23,3 +23,9 @@ def std(request):
 def view(request):
     students = Students.objects.all()
     return render(request, "view.html", {'students': students})
+
+## Delete Functionality
+def delete(request, id):
+    students = Students.objects.get(id = id)
+    students.delete()
+    return redirect("/view")
