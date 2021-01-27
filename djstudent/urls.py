@@ -19,5 +19,6 @@ from students import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('std/', views.std)
+    path('std/', views.std),
+    path('view/', views.view)
 ]
