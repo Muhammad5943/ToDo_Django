@@ -29,3 +29,8 @@ def delete(request, id):
     students = Students.objects.get(id = id)
     students.delete()
     return redirect("/view")
+
+## Edit Functionality
+def edit(request, id):
+    students = Students.objects.get(id = id)
+    return render(request, 'edit.html', {'students': students})
